@@ -3,7 +3,8 @@ Tired of searching through iOS local storage to find juicy files manually? It is
 
 ## Installation
 Just `git clone` this repo and you're good to go! Its as simple as that.
-`git clone `
+
+`git clone https://github.com/shibinbshaji/iStorageEnum.git`
 
 ## Usage
 1. Requirement: APP_ID
