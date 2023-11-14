@@ -1,12 +1,12 @@
 # iStorageEnum
-Tired of searching through iOS local storage to find juicy files manually? It is time consuming, yea ikr. Enter iStorageEnum; a simple script to enumerate juicy files (.plist, .json, .jpg etc.) of a given application from the local storage.
+Tired of searching through iOS / Android local storage to find juicy files manually? It is time consuming, yea ikr. Enter iStorageEnum; a simple script to enumerate juicy files (.plist, .json, .jpg etc.) of a given application from the local storage.
 
 ## Installation
 Just `git clone` this repo and you're good to go! Its as simple as that.
 
 `git clone https://github.com/shibinbshaji/iStorageEnum.git`
 
-## Usage
+## Usage (iOS)
 1. Requirement: APP_ID
   This can be fetched using `objection`.
   
@@ -20,8 +20,25 @@ Just `git clone` this repo and you're good to go! Its as simple as that.
 Now that we have everything, call the script using:
 
   `ssh root@xxx.xxx.xxx.xxx 'bash -s' < script.sh <APP_ID>`
+
+
   
-## Sample output
+## Usage (Android)
+1. Requirement: package.name
+  This can be fetched using `frida`.
+  
+  `frida-ps -Uai`
+  
+  From the list of applications, find the application and note down it's package name.
+  
+2. SSH connection to the device
+  We are running the script via ssh to avoid storing this file on the Android device.
+  
+Now that we have everything, call the script using:
+
+  `ssh root@xxx.xxx.xxx.xxx 'bash -s' < script.sh <package.name>`
+  
+## Sample output (iOS)
 
 ```
 Navigating to Application files
